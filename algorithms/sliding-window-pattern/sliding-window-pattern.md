@@ -4,9 +4,9 @@ the sliding window pattern! It's a clever technique frequently used in algorithm
 
 This pattern really shines when you need to find things like:
 
-    The maximum or minimum sum of a contiguous subarray of a fixed size.
-    The longest or shortest substring containing a certain number of distinct characters.
-    Checking if a string contains a permutation of another string.
+   - The maximum or minimum sum of a contiguous subarray of a fixed size.
+   - The longest or shortest substring containing a certain number of distinct characters.
+   - Checking if a string contains a permutation of another string.
 
 
 The beauty of the sliding window approach lies in its efficiency. Instead of repeatedly iterating over all possible subarrays or substrings, you perform computations incrementally as the window slides, often reducing the time complexity significantly.
@@ -21,11 +21,11 @@ In this type, the size of the window, often denoted as k, is fixed throughout th
 
 **When to use it:**
 
-    When the problem involves processing contiguous subarrays or substrings of a specific, predetermined length.
-    Finding the maximum/minimum sum of a subarray of size k.   
+When the problem involves processing contiguous subarrays or substrings of a specific, predetermined length:
 
-Calculating the average of all subarrays of size k.
-Counting occurrences of a specific pattern (like an anagram) within a window of a fixed size.
+- Finding the maximum/minimum sum of a subarray of size k.   
+- Calculating the average of all subarrays of size k.
+- Counting occurrences of a specific pattern (like an anagram) within a window of a fixed size.
 
 
 **How it works (Conceptual Steps):**
@@ -67,7 +67,7 @@ In this type, the size of the window is not fixed and can expand or shrink based
     Repeat: Continue expanding and shrinking the window until the end pointer reaches the end of the data structure.
     Keep track of the desired value: Maintain a variable to store the best (e.g., maximum length, minimum length) result found so far.
 
-Example: Find the length of the longest substring without repeating characters in the string "abcabcbb".
+    Example: Find the length of the longest substring without repeating characters in the string "abcabcbb".
 
     start = 0, end = 0, window "", length = 0.
     end = 1, window "a", length = 1.
