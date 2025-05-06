@@ -44,3 +44,34 @@ Find the maximum sum of any contiguous subarray of size 3 in the array [1, 4, 2,
     Slide: [4, 2, 10], sum = 16.
     Slide: [2, 10, 2], sum = 14.
     
+
+2. **Dynamic (or Variable-Size) Sliding Window**
+
+In this type, the size of the window is not fixed and can expand or shrink based on certain conditions defined by the problem. You typically use two pointers, one to mark the beginning of the window and another to mark the end. These pointers move to adjust the window size to satisfy the given constraints.  
+
+**When to use it:**
+
+   [x] When the problem asks for a subarray or substring that meets a certain condition, but the size of this subarray/substring is not predetermined.
+
+   [x] Finding the longest/shortest substring with a specific number of distinct characters.   
+   [x] Finding the smallest window in a string containing all characters of another string.  
+   [x] Finding subarrays with a sum equal to a target value.
+
+
+**How it works (Conceptual Steps):**
+
+    Initialize pointers: Set a start pointer (left end of the window) and an end pointer (right end of the window) both to the beginning of the data structure.
+    Expand the window: Move the end pointer to the right, expanding the window, until a certain condition is met.   
+
+    Shrink the window: Once the condition is met, move the start pointer to the right, shrinking the window, while the condition remains true. This helps in finding the optimal (e.g., smallest or longest) window that satisfies the condition.
+    Repeat: Continue expanding and shrinking the window until the end pointer reaches the end of the data structure.
+    Keep track of the desired value: Maintain a variable to store the best (e.g., maximum length, minimum length) result found so far.
+
+Example: Find the length of the longest substring without repeating characters in the string "abcabcbb".
+
+    start = 0, end = 0, window "", length = 0.
+    end = 1, window "a", length = 1.
+    end = 2, window "ab", length = 2.
+    end = 3, window "abc", length = 3.
+    end = 4, window "abca". Condition violated (repeating 'a'). Move start.
+    start = 1, window "bca", length = 3.
